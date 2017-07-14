@@ -10,24 +10,23 @@
  */
 
 ?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wpblank2017_s' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'wpblank2017_s' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'wpblank2017_s' ), 'wpblank2017_s', '<a href="https://automattic.com/">Gaël GERARD</a>' );
-			?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	
+		</div><!-- #content -->
+	
+		<footer id="colophon" class="site-footer">
+			<div class="site-info">
+				<?php
+					get_template_part('template-parts/copyright');
+				?>
+			</div><!-- .site-info -->
+		<div class="back-to-top button"><?php echo  __('Top of page', 'wpblank2017_s') ?></div>
+		</footer><!-- #colophon -->
+	</div><!-- .wrapper -->
 </div><!-- #page -->
 
+	<div id="cookie-bar" class="cookie-message fixed bottom">
+				<p><?php echo get_theme_mod( 'cookie_message', 'Ce site utilise des cookies pour vous offrir une meilleure navigation. En poursuivant votre visite, vous acceptez l\'utilisation de ces cookies.' ); ?></p> <a class="my-close-button button" href><?php echo get_theme_mod( 'cookie_message_closeButton', 'Ok !' ); ?></a>
+				</div>
 <?php wp_footer(); ?>
 
 </body>

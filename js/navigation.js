@@ -103,4 +103,65 @@
 			}
 		}
 	}( container ) );
-} )();
+   jQuery(function ($){
+	$(window).scroll(function() {
+		   if ( $(this).scrollTop() > 200 ) {
+			   $( '.back-to-top' ).fadeIn();
+		   } else {
+			   $( '.back-to-top' ).fadeOut();
+		   }
+	   });
+        $( '.back-to-top' ).click(function () {
+            $( 'body,html' ).animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+		
+ 	  $('.cookie-message').cookieBar({ closeButton : '.my-close-button', hideOnClose: false });
+		$('.cookie-message').on('cookieBar-close', function() { $(this).slideUp(); });
+	  // media query event handler
+	  var detectViewPort = function(){
+		  var viewPortWidth = $(window).width();
+	   if (viewPortWidth > 767) {
+				  // window width is at least 767px
+				  $('body').addClass('desktop').removeClass('mobile');
+			  }
+			  else {
+				  // window width is less than 768px
+				  $('body').addClass('mobile').removeClass('desktop');
+	  
+		
+			$('.mobile #primary-menu').slicknav({
+							prependTo:'.mobile #site-navigation',
+							
+							duration: 400,
+						'closedSymbol': '', // Character after collapsed parents.
+						'openedSymbol': '', // Character after expanded parents.
+						//'open': function(trigger){
+						//			var that = trigger.parent().children('ul');
+						//			$('.slicknav_menu ul li.slicknav_open ul').each(function(){
+						//		if($(this).get( 0 ) != that.get( 0 )){
+						//				$(this).slideUp().addClass('slicknav_hidden');
+						//				$(this).parent().removeClass('slicknav_open').addClass('slicknav_collapsed');
+						//		}
+						//			})
+						//	}, 
+		
+			});//end SlickNav		  
+		  
+		  }// END media query change
+	  };
+	  
+			  $(function(){
+				detectViewPort();
+			  });
+			  
+			  $(window).resize(function () {
+				 detectViewPort();
+			  });
+   });
+   
+		
+}//end function
+)();
