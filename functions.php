@@ -50,6 +50,7 @@ function wpblank2017_s_setup() {
         'sidebar-menu' => esc_html__('Menu de la sidebar', 'wpblank2017_s'), // 
         'footer-menu' => esc_html__('Footer menu', 'wpblank2017_s'), // Sidebar Navigation
         'extra-menu' => esc_html__('Extra menu', 'wpblank2017_s'), // Extra Navigation if needed (duplicate as many as you need!)
+        'error-menu' => esc_html__('Error menu', 'wpblank2017_s'), // Extra Navigation if needed (duplicate as many as you need!)
 	) );
 
 	/*
@@ -106,6 +107,15 @@ add_action( 'after_setup_theme', 'wpblank2017_s_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function wpblank2017_s_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Header', 'wpblank2017_s' ),
+		'id'            => 'header-1',
+		'description'   => esc_html__( 'Add widgets here.', 'wpblank2017_s' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'wpblank2017_s' ),
 		'id'            => 'sidebar-1',

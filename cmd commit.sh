@@ -1,1 +1,0 @@
-git push https://github.com/gaelgerard/wpblank2017_s.git master

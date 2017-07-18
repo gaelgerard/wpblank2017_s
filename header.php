@@ -54,7 +54,7 @@
 						$login = get_theme_mod( 'checkbox_login' );
 						$login_lightbox = get_theme_mod( 'checkbox_login_lightbox' );
 						if ( !empty($login) || !empty($login_lightbox) ){
-							 get_template_part('login-box');
+							 get_template_part('template-parts/login-box');
 						}
 						 ?>
 			<div class="site-branding">
@@ -84,6 +84,10 @@
 					) );
 				?>
 			</nav><!-- #site-navigation -->
+			<?php get_template_part('template-parts/header-widget'); ?>
+			<div class="search-header">
+				<?php get_template_part('template-parts/searchform'); ?>
+			</div>
 		</header><!-- #masthead -->
 	
 		<div id="content" class="site-content">

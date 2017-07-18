@@ -19,7 +19,7 @@
 					get_template_part('template-parts/copyright');
 				?>
 			</div><!-- .site-info -->
-		<div class="back-to-top button"><?php echo  __('Top of page', 'wpblank2017_s') ?></div>
+		<div class="back-to-top small-hidden tiny-hidden"><?php echo  __('Top of page', 'wpblank2017_s') ?></div>
 		</footer><!-- #colophon -->
 	</div><!-- .wrapper -->
 </div><!-- #page -->

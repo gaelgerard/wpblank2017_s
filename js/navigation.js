@@ -104,20 +104,15 @@
 		}
 	}( container ) );
    jQuery(function ($){
-	$(window).scroll(function() {
-		   if ( $(this).scrollTop() > 200 ) {
-			   $( '.back-to-top' ).fadeIn();
-		   } else {
-			   $( '.back-to-top' ).fadeOut();
-		   }
-	   });
-        $( '.back-to-top' ).click(function () {
-            $( 'body,html' ).animate({
-                scrollTop: 0
-            }, 800);
-            return false;
-        });
-		
+		$( "#slideLogin" ).click(
+			function() {
+				$("#loginBox").removeClass("mfp-hide").stop(true,false).slideToggle('150');
+			});
+            
+    jQuery('#user_login').attr('placeholder', 'Nom d\'utilisateur');
+    jQuery('#user_email').attr('placeholder', 'Adresse E-mail');
+    jQuery('#user_pass').attr('placeholder', 'Mot de passe');
+    jQuery('.login-form.contact_form #wp-submit').addClass('wpcf7-submit');
  	  $('.cookie-message').cookieBar({ closeButton : '.my-close-button', hideOnClose: false });
 		$('.cookie-message').on('cookieBar-close', function() { $(this).slideUp(); });
 	  // media query event handler
@@ -126,6 +121,20 @@
 	   if (viewPortWidth > 767) {
 				  // window width is at least 767px
 				  $('body').addClass('desktop').removeClass('mobile');
+					$(window).scroll(function() {
+						   if ( $(this).scrollTop() > 200 ) {
+							   $( '.back-to-top' ).fadeIn();
+						   } else {
+							   $( '.back-to-top' ).fadeOut();
+						   }
+					   });
+						$( '.back-to-top' ).click(function () {
+							$( 'body,html' ).animate({
+								scrollTop: 0
+							}, 800);
+							return false;
+						});
+			$('.search-header').appendTo('.site-header');
 			  }
 			  else {
 				  // window width is less than 768px
@@ -148,7 +157,8 @@
 						//			})
 						//	}, 
 		
-			});//end SlickNav		  
+			});//end SlickNav
+			$('.search-header').appendTo('.slicknav_menu');
 		  
 		  }// END media query change
 	  };

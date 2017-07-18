@@ -21,9 +21,9 @@
 				 $urlprofile = get_edit_user_link( $user_ID ) ;
 				 //echo "$first_name $last_name logs into her WordPress site with the user name of $username.";
 	 ?>
-	 <?php _e( 'Welcome', 'html5blank' ); ?>, <a href="<?php echo $urlprofile; ?>" title="<?php _e( 'Edit profile', 'html5blank' ); ?>"><?php if (!empty($first_name)){echo $first_name ?> <?php } ?><?php if (!empty($last_name)){echo $last_name;} else if (empty($first_name) && empty($last_name)) {echo $username;} ?></a>
+	 <?php _e( 'Welcome', 'wpblank2017_s' ); ?>, <a href="<?php echo $urlprofile; ?>" title="<?php _e( 'Edit profile', 'wpblank2017_s' ); ?>"><?php if (!empty($first_name)){echo $first_name ?> <?php } ?><?php if (!empty($last_name)){echo $last_name;} else if (empty($first_name) && empty($last_name)) {echo $username;} ?></a>
 	 
-		<a class="logout" href="<?php echo wp_logout_url( get_permalink() ); ?>"><span><?php _e( 'Log out', 'html5blank' ); ?></span><i class="fa fa-sign-out bouton"></i></a>
+		<a class="logout" href="<?php echo wp_logout_url( get_permalink() ); ?>"><span><?php _e( 'Log out', 'wpblank2017_s' ); ?></span><i class="fa fa-sign-out bouton"></i></a>
 		<?php
 				if ( class_exists('Ggai_Wp_Extranet_Loader') ) {
 					 if ( has_nav_menu( 'extranet-header-menu' )) { ?>
@@ -38,11 +38,10 @@
 	<?php } else { ?> 
 <div id="header-connect"  class="<?php echo $classLightbox; ?>">
  <div id="loginBtn">
-<a id="popLogin" class="login not-phone" href="#loginBox"><i class="fa fa-sign-in bouton"></i> <?php _e( 'Connect', 'html5blank' ); ?></a>
-<a id="slideLogin" class="login <?php echo $classLightbox; ?> only-phone" href="#no"><i class="fa fa-sign-in bouton"></i> <span><?php _e( 'Connect', 'html5blank' ); ?></span></a>
+<button id="slideLogin" class="login <?php echo $classLightbox; ?>"><i class="fa fa-sign-in bouton"></i> <span><?php _e( 'Connect', 'wpblank2017_s' ); ?></span></button>
  </div>
 <div id="loginBox" class="loginFormContainer">
- <?php get_template_part('login','form'); ?>
+ <?php get_template_part('template-parts/login','form'); ?>
 </div>
 </div>
 <?php }; ?>

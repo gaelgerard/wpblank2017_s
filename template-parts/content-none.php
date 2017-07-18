@@ -45,6 +45,11 @@
 			<?php
 				get_search_form();
 
-		endif; ?>
+		endif; ?>				
+				<p><?php echo __('You can also navigate in the categories below:', 'html5blank');?><!--Vous pouvez également naviguer parmis les rubriques ci-dessous--></p>
+				
+				<div class="nav404">
+					<?php wp_nav_menu( array( 'theme_location' => 'error-menu', 'menu_id' => 'error-menu' ) ); ?>
+				</div>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->
