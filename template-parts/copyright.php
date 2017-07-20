@@ -29,17 +29,17 @@
 								$lien_contact = get_the_title( $lien_contact_id );
 								$lien_contact_url = get_the_permalink( $lien_contact_id );
 							?>
-								<li><a href="/" class="owner">&copy; <?php echo $startCopyRight ?> <?php if (!empty($nom_societe) ) { ?><span class="nom_societe"><?php echo $nom_societe; ?></span><?php } else { bloginfo('name');} ?></a></li>
+								<li class="inbl tiny-w100 pas"><a href="/" class="owner">&copy; <?php echo $startCopyRight ?> <?php if (!empty($nom_societe) ) { ?><span class="nom_societe"><?php echo $nom_societe; ?></span><?php } else { bloginfo('name');} ?></a></li>
 								<?php if (!empty($nom_agence) && !empty($url_agence)):?>
-									<li><a href="<?php echo $url_agence; ?>" target="_blank"><?php echo $nom_agence; ?></a>
+									<li class="inbl tiny-w100 pas"><a href="<?php echo $url_agence; ?>" target="_blank"><?php echo $nom_agence; ?></a>
 									<?php elseif (!empty($nom_agence) && empty($url_agence)):?><?php echo $nom_agence; ?>
 									</li>
 								<?php endif; ?>
 							<?php if (!empty($lien_legal_id)):?>
-							<li class="lien legal"><a href="<?php echo $lien_legal_url; ?>"><?php echo $lien_legal; ?></a></li>
+							<li class="lien legal inbl tiny-w100 pas"><a href="<?php echo $lien_legal_url; ?>"><?php echo $lien_legal; ?></a></li>
 							<?php endif; ?>
 							<?php if (!empty($lien_contact_id)):?>
-							<li class="lien contact"><a href="<?php echo $lien_contact_url; ?>"><?php echo $lien_contact; ?></a></li>
+							<li class="lien contact inbl tiny-w100 pas"><a href="<?php echo $lien_contact_url; ?>"><?php echo $lien_contact; ?></a></li>
 							<?php endif; ?>
 							<!-- /copyright -->
 					</ul>

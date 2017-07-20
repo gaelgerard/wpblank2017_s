@@ -14,10 +14,18 @@
 		</div><!-- #content -->
 	
 		<footer id="colophon" class="site-footer">
-			<div class="site-info">
+			<div class="row">
+				<?php
+					get_template_part('template-parts/custom-footer');
+				?>
+	
+			</div>
+			<div class="flex-container site-info">
+				<div class="flex-item-center  tiny-w100 txtcenter">
 				<?php
 					get_template_part('template-parts/copyright');
 				?>
+				</div>
 			</div><!-- .site-info -->
 		<div class="back-to-top small-hidden tiny-hidden"><?php echo  __('Top of page', 'wpblank2017_s') ?></div>
 		</footer><!-- #colophon -->
@@ -28,6 +36,5 @@
 				<p><?php echo get_theme_mod( 'cookie_message', 'Ce site utilise des cookies pour vous offrir une meilleure navigation. En poursuivant votre visite, vous acceptez l\'utilisation de ces cookies.' ); ?></p> <a class="my-close-button button" href><?php echo get_theme_mod( 'cookie_message_closeButton', 'Ok !' ); ?></a>
 				</div>
 <?php wp_footer(); ?>
-
 </body>
 </html>

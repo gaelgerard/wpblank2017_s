@@ -1,7 +1,11 @@
-<div class="adresse">
-    <address>
-						<!--<div class="col un">-->
+<div class="map">
+	<div class="acf-map">
                         <?php
+					$location = get_field('location');
+					?>
+					
+					<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
+					<?php
 					    $nom_societe = get_theme_mod( 'nom_societe' );
 					   $nom_societe2 = get_theme_mod( 'nom_societe2' );
 					    if (!empty($nom_societe))  { ?>
@@ -49,6 +53,6 @@
 						<?php if (!empty($email)):?>
 						<p><a href="mailto:<?php echo antispambot($email, 1); ?>"><?php echo $email; ?></a></p>
 						<?php endif; ?>
-						<!--</div>-->
-    </address>
+					</div>
+	</div>
 </div>
