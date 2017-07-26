@@ -26,7 +26,7 @@ if ( ! is_user_logged_in() ) { // Display WordPress login form:
 		{
 			?>
 		<div id="login-error" class="error">
-			<?php _e('<strong>ERROR</strong>: Invalid username or password.','html5blank'); ?>&nbsp;<?php _e('Please try again.'); ?> 
+			<?php _e('<strong>ERROR</strong>: Invalid username or password.','wpblank2017_s'); ?>&nbsp;<?php _e('Please try again.'); ?> 
 		</div>
 			<?php
 		}
@@ -82,7 +82,7 @@ if ( ! is_user_logged_in() ) { // Display WordPress login form:
 				echo __('Password Reset');
 			}else if (isset($_GET['status']) && $_GET['status'] == 'new') {
 				$login = $_GET['login'];
-				printf(__('Welcome %s, please set your password below.','html5blank'),$login);
+				printf(__('Welcome %s, please set your password below.','wpblank2017_s'),$login);
 			} ?></h2>
 		
 	<div id="message"></div>
@@ -101,7 +101,7 @@ if ( ! is_user_logged_in() ) { // Display WordPress login form:
 		// display error message
 		if ( $errors->get_error_code() ) {
 			echo '<div class="error">'.$errors->get_error_message( $errors->get_error_code() ).'</div>
-			<a href="'.$blogurl.'/connexion?action=lostpassword" title="'.__( 'Lost your password?', 'html5blank' ).'">'.__( 'Lost your password?', 'html5blank' ).'</a>';
+			<a href="'.$blogurl.'/connexion?action=lostpassword" title="'.__( 'Lost your password?', 'wpblank2017_s' ).'">'.__( 'Lost your password?', 'wpblank2017_s' ).'</a>';
 		}else if ( ! $errors->get_error_code() ) {
 			
 			
@@ -129,7 +129,7 @@ if ( ! is_user_logged_in() ) { // Display WordPress login form:
 				<input type="password" name="pass2" id="pass2" class="input" size="20" value="" autocomplete="off" /></label>
 			</p>
 
-			<p class="description indicator-hint"><?php _e('Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! " ? $ % ^ &amp; ).','html5blank'); ?></p>
+			<p class="description indicator-hint"><?php _e('Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! " ? $ % ^ &amp; ).','wpblank2017_s'); ?></p>
 
 			<br class="clear" />
 
@@ -155,8 +155,8 @@ if ( ! is_user_logged_in() ) { // Display WordPress login form:
  
     }else if( is_user_logged_in() )  { // If logged in:?>
     <h2><?php _e( 'Log out' ); ?></h2>
-    <p><?php _e( 'You are logged in already.','html5blank' ); ?></p>
-    <p><?php _e( 'You can log out with the link below:','html5blank' ); ?></p>
+    <p><?php _e( 'You are logged in already.','wpblank2017_s' ); ?></p>
+    <p><?php _e( 'You can log out with the link below:','wpblank2017_s' ); ?></p>
     <p><?php wp_loginout( home_url() ); // Display "Log Out" link. ?></p>
    <?php
 }

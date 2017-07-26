@@ -38,16 +38,16 @@
 						$fax = get_theme_mod( 'fax_societe' );
 						$email = get_theme_mod( 'email_societe' );
 						if (!empty($tel) && !empty($tel_url)):?>
-						<p><?php echo  __('Tel.', 'wpblank2017_s') ?>: <a href="tel:<?php echo $tel_url; ?>"><?php echo $tel; ?></a></p>
+						<p class="phone"><?php echo  __('Tel.', 'wpblank2017_s') ?>: <a href="tel:<?php echo $tel_url; ?>"><?php echo $tel; ?></a></p>
 						<?php
 						elseif (!empty($tel) && empty($tel_url)):?>
-						<p><?php echo  __('Tel.', 'wpblank2017_s') ?><?php echo $tel; ?></p>
+						<p class="phone"><?php echo  __('Tel.', 'wpblank2017_s') ?><?php echo $tel; ?></p>
 						<?php endif; ?>
 						<?php if (!empty($fax)):?>
-						<p><?php echo  __('Fax', 'wpblank2017_s') ?>: <?php echo $fax; ?></p>
+						<p class="fax"><?php echo  __('Fax', 'wpblank2017_s') ?>: <?php echo $fax; ?></p>
 						<?php endif; ?>
 						<?php if (!empty($email)):?>
-						<p><a href="mailto:<?php echo antispambot($email, 1); ?>"><?php echo $email; ?></a></p>
+						<p class="mailto"><a href="mailto:<?php echo antispambot($email, 1); ?>"><?php echo $email; ?></a></p>
 						<?php endif; ?>
 						<!--</div>-->
     </address>

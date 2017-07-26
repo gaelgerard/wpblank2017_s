@@ -108,7 +108,21 @@
 			function() {
 				$("#loginBox").removeClass("mfp-hide").stop(true,false).slideToggle('150');
 			});
-            
+      					
+		function myScroll() {
+						   if ( $(window).scrollTop() > 200 ) {
+							   $( '.back-to-top' ).stop(true, false).fadeIn();
+						   } else {
+							   $( '.back-to-top' ).stop(true, false).fadeOut();
+						   };
+		}
+						$( '.back-to-top' ).click(function () {
+							$( 'body,html' ).animate({
+								scrollTop: 0
+							}, 800);
+							return false;
+						});
+
     jQuery('#user_login').attr('placeholder', 'Nom d\'utilisateur');
     jQuery('#user_email').attr('placeholder', 'Adresse E-mail');
     jQuery('#user_pass').attr('placeholder', 'Mot de passe');
@@ -121,26 +135,18 @@
 	   if (viewPortWidth > 767) {
 				  // window width is at least 767px
 				  $('body').addClass('desktop').removeClass('mobile');
-					$(window).scroll(function() {
-						   if ( $(this).scrollTop() > 200 ) {
-							   $( '.back-to-top' ).fadeIn();
-						   } else {
-							   $( '.back-to-top' ).fadeOut();
-						   }
-					   });
-						$( '.back-to-top' ).click(function () {
-							$( 'body,html' ).animate({
-								scrollTop: 0
-							}, 800);
-							return false;
-						});
-			$('.search-header').appendTo('.site-header');
+
+    $(window).scroll(myScroll);
+			$('.search-header').appendTo('.headerwrapper');
+			$('.search-header-toggle').click(function() {
+				$(this).parent('.search-header').toggleClass('active');
+				});
 			  }
 			  else {
 				  // window width is less than 768px
 				  $('body').addClass('mobile').removeClass('desktop');
-	  
-		
+	  $(window).off("scroll",myScroll);
+
 			$('.mobile #primary-menu').slicknav({
 							prependTo:'.mobile #site-navigation',
 							

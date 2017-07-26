@@ -52,43 +52,49 @@
 	</div>
 	<?php }; ?>
 	<div class="wrapper">
-		<header id="masthead" class="site-header"><?php
+		<header id="masthead" class="site-header">
+					<?php
 						$login = get_theme_mod( 'checkbox_login' );
 						$login_lightbox = get_theme_mod( 'checkbox_login_lightbox' );
 						if ( !empty($login) || !empty($login_lightbox) ){
 							 get_template_part('template-parts/login-box');
 						}
-						 ?>
-			<div class="site-branding">
-				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-				endif;
-	
-				$description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) : ?>
-					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-				<?php
-				endif; ?>
-			</div><!-- .site-branding -->
-	
-			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span></span><?php esc_html_e( 'Primary Menu', 'wpblank2017_s' ); ?></button>
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'main-menu',
-						'menu_id'        => 'primary-menu',
-						'menu_class'        => 'flex-container',
-					) );
-				?>
-			</nav><!-- #site-navigation -->
-			<?php get_template_part('template-parts/header-widget'); ?>
-			<div class="search-header">
-				<?php get_template_part('template-parts/searchform'); ?>
+					?>
+			<div class="headerwrapper">
+				<div class="site-branding">
+					<?php
+					the_custom_logo();
+					if ( is_front_page() && is_home() ) : ?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php else : ?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php
+					endif;
+		
+					$description = get_bloginfo( 'description', 'display' );
+					if ( $description || is_customize_preview() ) : ?>
+						<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+					<?php
+					endif; ?>
+				</div><!-- .site-branding -->
+		
+				<nav id="site-navigation" class="main-navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span></span><?php esc_html_e( 'Primary Menu', 'wpblank2017_s' ); ?></button>
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'main-menu',
+							'menu_id'        => 'primary-menu',
+							'menu_class'        => 'flex-container',
+						) );
+					?>
+				</nav><!-- #site-navigation -->
+				<?php get_template_part('template-parts/header-widget'); ?>
+				<div class="search-header">
+					<button class="search-header-toggle" aria-controls="search-header-container" aria-expanded="false"><span></span><?php esc_html_e( 'Search', 'wpblank2017_s' ); ?></button>
+					<div class="search-header-container">
+					<?php get_template_part('template-parts/searchform'); ?>
+					</div>
+				</div>
 			</div>
 		</header><!-- #masthead -->
 	

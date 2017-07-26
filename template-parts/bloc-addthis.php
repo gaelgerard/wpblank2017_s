@@ -23,7 +23,7 @@
 						$rss = get_theme_mod( 'checkbox_rss' );
 						if (!empty($rss)):?>
 			<!-- AddThis Button END -->
-			<a class="rss bouton" href="/feed/" title="<?php echo __('RSS Feed', 'html5blank');?>"><i class="fa fa-rss"></i>
+			<a class="rss bouton" href="/feed/" title="<?php echo __('RSS Feed', 'wpblank2017_s');?>"><i class="fa fa-rss"></i>
 </a>
 
 			

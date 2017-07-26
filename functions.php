@@ -143,10 +143,11 @@ add_action( 'widgets_init', 'wpblank2017_s_widgets_init' );
 function wpblank2017_s_scripts() {
 	wp_enqueue_style( 'wpblank2017_s-style', get_template_directory_uri()  . '/style.css', array(), false, 'all');
 	wp_enqueue_style( 'knacss6', get_template_directory_uri()  . '/css/knacss6.css', array(), false, 'all');
-	wp_enqueue_style('childtheme', get_stylesheet_directory_uri() . '/style.css', array(), false, 'all');
 	wp_enqueue_style('menu-hamburger', get_template_directory_uri() . '/css/menu-hamburger.css', array(), false, 'all');
     wp_enqueue_style('slicknav',  get_template_directory_uri() . '/css/slicknav.css', array(), false, 'all');
     wp_enqueue_style('jquery.cookiebar',  get_template_directory_uri() . '/css/cookieBar.min.css', array(), false, 'all');
+	wp_enqueue_style('childtheme', get_stylesheet_directory_uri() . '/style.css', array(), false, 'all');
+	wp_enqueue_style('childtheme-colors', get_stylesheet_directory_uri() . '/css/colors.css', array(), false, 'all');
   
 
 	wp_enqueue_script( 'wpblank2017_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -173,16 +174,70 @@ function wpblank2017_s_scripts() {
 	
 }
 add_action( 'wp_enqueue_scripts', 'wpblank2017_s_scripts' );
+
 // Add scripts to wp_head()
 function wpblank2017_shead_script() {
 	require get_stylesheet_directory() . '/inc/fonts.php';
-	?>
-
-	<?php
-
-	
 }
 add_action( 'wp_head', 'wpblank2017_shead_script' );
+
+//Add a custom styles drop down menu in WordPress Visual Editor
+function wpblank2017_s_mce_buttons_2($buttons) {
+	array_unshift($buttons, 'styleselect');
+	return $buttons;
+}
+add_filter('mce_buttons_2', 'wpblank2017_s_mce_buttons_2');
+
+/*
+* Callback function to filter the MCE settings
+*/
+
+function my_mce_before_init_insert_formats( $init_array ) {  
+
+// Define the style_formats array
+
+	$style_formats = array(  
+/*
+* Each array child is a format with it's own settings
+* Notice that each array has title, block, classes, and wrapper arguments
+* Title is the label which will be visible in Formats menu
+* Block defines whether it is a span, div, selector, or inline style
+* Classes allows you to define CSS classes
+* Wrapper whether or not to add a new block-level element around any selected elements
+*/
+		array(  
+			'title' => 'Colonne Texte',  
+			'block' => 'span',  
+			'classes' => 'column',
+			'wrapper' => true,
+			
+		),  
+		array(  
+			'title' => 'Bouton',  
+			'block' => 'a',  
+			'classes' => 'button',
+			'wrapper' => true,
+		),
+		//array(  
+		//	'title' => 'Red Button',  
+		//	'block' => 'span',  
+		//	'classes' => 'red-button',
+		//	'wrapper' => true,
+		//),
+	);  
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = json_encode( $style_formats );  
+	
+	return $init_array;  
+  
+} 
+// Attach callback to 'tiny_mce_before_init' 
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
+
+function wpblank2017_s_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'init', 'wpblank2017_s_add_editor_styles' );
 /**
  * Implement the Custom Header feature.
  */

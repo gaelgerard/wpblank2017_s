@@ -41,6 +41,7 @@ class theme_customizer
 
         $wp_manager->add_control( 'nom_societe', array(
             'label'   => 'Nom de la société ',
+            'description' => 'Pour le champ adresse si on veut qu\'il soit différent du titre du site',
             'section' => 'configuration_client_section',
             'type'    => 'text',
             'priority' => 1
@@ -157,17 +158,17 @@ class theme_customizer
         ) );
 
         // WP_Customize_Image_Control
-        $wp_manager->add_setting( 'logo_societe', array(
-            'default'        => '',
-        ) );
-
-        $wp_manager->add_control( new WP_Customize_Image_Control( $wp_manager, 'logo_societe', array(
-            'label'   => 'Logo de la société',
-            'description'   => 'Logo de la société',
-            'section' => 'configuration_client_section',
-            'settings'   => 'logo_societe',
-            'priority' => 0
-        ) ) );
+        //$wp_manager->add_setting( 'logo_societe', array(
+        //    'default'        => '',
+        //) );
+        //
+        //$wp_manager->add_control( new WP_Customize_Image_Control( $wp_manager, 'logo_societe', array(
+        //    'label'   => 'Logo de la société',
+        //    'description'   => 'Logo de la société',
+        //    'section' => 'configuration_client_section',
+        //    'settings'   => 'logo_societe',
+        //    'priority' => 0
+        //) ) );
        
         $wp_manager->add_setting( 'nom_agence', array(
             'default'        => '',

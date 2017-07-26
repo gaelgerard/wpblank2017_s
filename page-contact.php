@@ -31,8 +31,8 @@ get_footer();
 	  <script type="text/javascript">
 
     jQuery(function ($){
-		jQuery("#offres-liste option").eq(0).text("<?php echo  __('Job opportunity*', 'html5blank') ;?>");
-		jQuery("#civilite option").eq(0).text("<?php echo  __('Gender*', 'html5blank') ;?>");
+		jQuery("#offres-liste option").eq(0).text("<?php echo  __('Job opportunity*', 'wpblank2017_s') ;?>");
+		jQuery("#civilite option").eq(0).text("<?php echo  __('Gender*', 'wpblank2017_s') ;?>");
 		
 		$('select.wpcf7-form-control').customSelect();
 	  });

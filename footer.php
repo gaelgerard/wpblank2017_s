@@ -14,7 +14,7 @@
 		</div><!-- #content -->
 	
 		<footer id="colophon" class="site-footer">
-			<div class="row">
+			<div class="custom-footer">
 				<?php
 					get_template_part('template-parts/custom-footer');
 				?>

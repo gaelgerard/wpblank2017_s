@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wpblank2017_s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-07-18 10:44+0200\n"
-"PO-Revision-Date: 2017-07-18 10:48+0200\n"
+"POT-Creation-Date: 2017-07-20 15:29+0200\n"
+"PO-Revision-Date: 2017-07-20 15:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: gaelgerard <gael.gerard@free.fr>\n"
 "Language: fr_FR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: esc_html_e;__;_e\n"
+"X-Poedit-KeywordsList: esc_html_e;__;_e;esc_html__;esc_html_x\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: languages/wpblank2017_s.pot\n"
 
@@ -45,21 +45,93 @@ msgstr "Une réaction sur &ldquo;%s&rdquo;"
 msgid "Comment navigation"
 msgstr "Voir les commentaires"
 
+#: comments.php:53 comments.php:74
+msgid "Older Comments"
+msgstr "Commentaires plus anciens"
+
+#: comments.php:54 comments.php:75
+msgid "Newer Comments"
+msgstr "Commentaires plus rescents"
+
 #: comments.php:88
 msgid "Comments are closed."
 msgstr "Les commentaires sont fermés."
 
-#: footer.php:22
+#: footer.php:30
 msgid "Top of page"
 msgstr "Haut de page"
 
-#: header.php:44
+#: functions.php:48
+msgid "Main menu"
+msgstr "Menu Principal"
+
+#: functions.php:49
+msgid "Menu entête"
+msgstr ""
+
+#: functions.php:50
+msgid "Menu de la sidebar"
+msgstr ""
+
+#: functions.php:51
+msgid "Footer menu"
+msgstr ""
+
+#: functions.php:52
+msgid "Extra menu"
+msgstr ""
+
+#: functions.php:53
+msgid "Error menu"
+msgstr ""
+
+#: functions.php:111
+msgid "Header"
+msgstr ""
+
+#: functions.php:113 functions.php:122 functions.php:131
+msgid "Add widgets here."
+msgstr ""
+
+#: functions.php:120
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:129
+msgid "Footer"
+msgstr ""
+
+#: header.php:46
 msgid "Skip to content"
 msgstr "Aller au contenu"
 
-#: header.php:78
+#: header.php:80
 msgid "Primary Menu"
 msgstr "Menu principal"
+
+#: inc/template-tags.php:29
+#, php-format
+msgid "Posted on %s"
+msgstr "Publié le %s"
+
+#: inc/template-tags.php:35
+#, php-format
+msgid "by %s"
+msgstr "par %s"
+
+#: inc/template-tags.php:52 inc/template-tags.php:59
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:55
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Publié dans %1$s"
+
+#: inc/template-tags.php:62
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
 
 #: inc/template-tags.php:72
 #, php-format
@@ -68,7 +140,7 @@ msgstr ""
 "Laisser un commentaire<span class=\"screen-reader-text\"> à propose de %s</"
 "span>"
 
-#: inc/template-tags.php:89 template-parts/content-homepage.php:32
+#: inc/template-tags.php:89 template-parts/content-homepage.php:31
 #: template-parts/content-page.php:35
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
@@ -82,13 +154,28 @@ msgstr "Choisir l'offre*"
 msgid "Gender*"
 msgstr "Civilité*"
 
-#: template-parts/adresse.php:33 template-parts/adresse.php:36
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultats de recherche pour %s"
+
+#: template-parts/adresse.php:41 template-parts/adresse.php:44
+#: template-parts/map-adresse.php:45 template-parts/map-adresse.php:48
 msgid "Tel."
 msgstr "Tél. "
 
-#: template-parts/adresse.php:39
+#: template-parts/adresse.php:47 template-parts/map-adresse.php:51
 msgid "Fax"
 msgstr ""
+
+#: template-parts/bloc-addthis.php:26
+msgid "RSS Feed"
+msgstr "Flux RSS"
+
+#: template-parts/content-homepage.php:18 template-parts/content-page.php:22
+#: template-parts/content.php:45
+msgid "Pages:"
+msgstr "Pages :"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"

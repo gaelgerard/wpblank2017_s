@@ -1,4 +1,4 @@
- <a id="loginBtn" href="#login-form-lightbox" class="button"><?php _e( 'Connect', 'html5blank' ); ?></a>
+ <a id="loginBtn" href="#login-form-lightbox" class="button"><?php _e( 'Connect', 'wpblank2017_s' ); ?></a>
      
     <div id="login-form-lightbox" class="login-form contact_form" style="display: none;">
 	
@@ -9,8 +9,8 @@ if ( ! is_user_logged_in() ) { // Display WordPress login form:
         'form_id' => 'loginform-lightbox',
         //'label_username' => __( 'Username' ),
         //'label_password' => __( 'Password' ),
-        //'label_remember' => _e( 'Remember me', 'html5blank' ),
-        //'label_log_in' => _e( 'Connect', 'html5blank' ),
+        //'label_remember' => _e( 'Remember me', 'wpblank2017_s' ),
+        //'label_log_in' => _e( 'Connect', 'wpblank2017_s' ),
         'remember' => true
     );?>
 	<h2>Connectez-vous</h2>

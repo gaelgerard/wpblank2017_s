@@ -46,7 +46,7 @@
 				get_search_form();
 
 		endif; ?>				
-				<p><?php echo __('You can also navigate in the categories below:', 'html5blank');?><!--Vous pouvez également naviguer parmis les rubriques ci-dessous--></p>
+				<p><?php echo __('You can also navigate in the categories below:', 'wpblank2017_s');?><!--Vous pouvez également naviguer parmis les rubriques ci-dessous--></p>
 				
 				<div class="nav404">
 					<?php wp_nav_menu( array( 'theme_location' => 'error-menu', 'menu_id' => 'error-menu' ) ); ?>
