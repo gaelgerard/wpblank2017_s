@@ -261,12 +261,20 @@ input::-webkit-input-placeholder {
 
 .desktop .main-navigation ul li:hover > ul,
 .desktop .main-navigation ul li.focus > ul {
+	left: 0;
+}
+.desktop .main-navigation ul li:last-child:hover > ul,
+.desktop .main-navigation ul li:last-child.focus > ul {
 	left: auto;
+	right: 0;
 }
 
+.desktop .main-navigation ul ul li:last-child:hover > ul,
+.desktop .main-navigation ul ul li:last-child.focus > ul,
 .desktop .main-navigation ul ul li:hover > ul,
 .desktop .main-navigation ul ul li.focus > ul {
 	left: 100%;
+	right: auto;
 }
 
 .desktop .main-navigation .current_page_item > a,

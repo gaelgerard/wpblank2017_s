@@ -138,9 +138,6 @@
 
     $(window).scroll(myScroll);
 			$('.search-header').appendTo('.headerwrapper');
-			$('.search-header-toggle').click(function() {
-				$(this).parent('.search-header').toggleClass('active');
-				});
 			  }
 			  else {
 				  // window width is less than 768px
