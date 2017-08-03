@@ -53,10 +53,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Footer
 --------------------------------------------------------------*/
 /*Footer*/
-
-#cookie-bar.fixed {
-    z-index: 1;
-}
 footer div.back-to-top {
 	background: #333;
     bottom: 6em;
@@ -109,19 +105,36 @@ footer div.back-to-top:hover {
   -o-transition: all ease 0.238s;
   transition: all ease 0.238s;
 }
+#cookie-bar.fixed {
+    z-index: 1;
+}
+#cookie-bar.fixed .cookie-message-container {
+	margin: 0 auto;
+	max-width: 860px;
+}
 #cookie-bar.fixed.bottom {
     bottom: 0;
+    padding: 0 2rem;
     top: auto;
 }
-.cookie-message a {
-    float: right;
+#cookie-bar.cookie-message a {
+    float: left;
     position: static;
+    text-align: center;
 }
 #cookie-bar.fixed.bottom p {
     display: inline-block;
     float: left;
-    margin-right: 10px;
-    width: 90%;
+}
+@media (min-width:767px) {
+	
+#cookie-bar.cookie-message a {
+    width: 14%;
+}
+#cookie-bar.fixed.bottom p {
+    margin-right: 2%;
+    width: 70%;
+}
 }
 /*--------------------------------------------------------------
  *Search Form

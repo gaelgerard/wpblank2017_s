@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wpblank2017_s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-07-20 15:29+0200\n"
-"PO-Revision-Date: 2017-07-20 15:30+0200\n"
+"POT-Creation-Date: 2017-08-02 16:34+0200\n"
+"PO-Revision-Date: 2017-08-02 16:35+0200\n"
 "Last-Translator: \n"
 "Language-Team: gaelgerard <gael.gerard@free.fr>\n"
 "Language: fr_FR\n"
@@ -61,6 +61,10 @@ msgstr "Les commentaires sont fermés."
 msgid "Top of page"
 msgstr "Haut de page"
 
+#: footer.php:43
+msgid "Read more"
+msgstr "En savoir plus"
+
 #: functions.php:48
 msgid "Main menu"
 msgstr "Menu Principal"
@@ -105,9 +109,13 @@ msgstr ""
 msgid "Skip to content"
 msgstr "Aller au contenu"
 
-#: header.php:80
+#: header.php:82
 msgid "Primary Menu"
 msgstr "Menu principal"
+
+#: header.php:93 template-parts/searchform.php:3
+msgid "Search"
+msgstr "Rechercher"
 
 #: inc/template-tags.php:29
 #, php-format
@@ -141,18 +149,11 @@ msgstr ""
 "span>"
 
 #: inc/template-tags.php:89 template-parts/content-homepage.php:31
+#: template-parts/content-page-contact.php:35
 #: template-parts/content-page.php:35
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr "Modifier <span class=\"screen-reader-text\">%s</span>"
-
-#: page-contact.php:34
-msgid "Job opportunity*"
-msgstr "Choisir l'offre*"
-
-#: page-contact.php:35
-msgid "Gender*"
-msgstr "Civilité*"
 
 #: search.php:21
 #, php-format
@@ -172,8 +173,9 @@ msgstr ""
 msgid "RSS Feed"
 msgstr "Flux RSS"
 
-#: template-parts/content-homepage.php:18 template-parts/content-page.php:22
-#: template-parts/content.php:45
+#: template-parts/content-homepage.php:18
+#: template-parts/content-page-contact.php:22
+#: template-parts/content-page.php:22 template-parts/content.php:45
 msgid "Pages:"
 msgstr "Pages :"
 
@@ -320,6 +322,12 @@ msgstr "Vous êtes déjà connecté."
 msgid "You can log out with the link below:"
 msgstr "Vous pouvez vous déconnecter en cliquant sur le lien ci-dessous :"
 
-#: template-parts/searchform.php:3
-msgid "Search"
-msgstr "Rechercher"
+#: template-parts/searchform.php:4
+msgid "Ok"
+msgstr ""
+
+#~ msgid "Job opportunity*"
+#~ msgstr "Choisir l'offre*"
+
+#~ msgid "Gender*"
+#~ msgstr "Civilité*"

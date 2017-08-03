@@ -143,9 +143,9 @@ add_action( 'widgets_init', 'wpblank2017_s_widgets_init' );
 function wpblank2017_s_scripts() {
 	wp_enqueue_style( 'wpblank2017_s-style', get_template_directory_uri()  . '/style.css', array(), false, 'all');
 	wp_enqueue_style( 'knacss6', get_template_directory_uri()  . '/css/knacss6.css', array(), false, 'all');
-	wp_enqueue_style('menu-hamburger', get_template_directory_uri() . '/css/menu-hamburger.css', array(), false, 'all');
     wp_enqueue_style('slicknav',  get_template_directory_uri() . '/css/slicknav.css', array(), false, 'all');
     wp_enqueue_style('jquery.cookiebar',  get_template_directory_uri() . '/css/cookieBar.min.css', array(), false, 'all');
+	wp_enqueue_style('contact', get_template_directory_uri() . '/css/contact.css', array(), false, 'all');
 	wp_enqueue_style('childtheme', get_stylesheet_directory_uri() . '/style.css', array(), false, 'all');
 	wp_enqueue_style('childtheme-colors', get_stylesheet_directory_uri() . '/css/colors.css', array(), false, 'all');
   
