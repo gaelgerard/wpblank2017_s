@@ -87,11 +87,11 @@
 							'menu_class'        => 'flex-container',
 						) );
 					?>
+					<button class="search-header-toggle" aria-controls="search-header-container" aria-expanded="false"><span></span><?php esc_html_e( 'Search', 'wpblank2017_s' ); ?></button>
 				</nav><!-- #site-navigation -->
 				<?php get_template_part('template-parts/header-widget'); ?>
 				<div class="search-header">
-					<button class="search-header-toggle" aria-controls="search-header-container" aria-expanded="false"><span></span><?php esc_html_e( 'Search', 'wpblank2017_s' ); ?></button>
-					<div class="search-header-container">
+					<div id="search-header-container" class="search-header-container">
 					<?php get_template_part('template-parts/searchform'); ?>
 					</div>
 				</div>

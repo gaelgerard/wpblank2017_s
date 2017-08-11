@@ -25,6 +25,7 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
+		<a class="readmore" href="<?php the_permalink(); ?>"><?php echo __('Read more','wpblank2017_s'); ?></a>
 		<?php wpblank2017_s_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -132,12 +132,13 @@
 	  // media query event handler
 	  var detectViewPort = function(){
 		  var viewPortWidth = $(window).width();
-	   if (viewPortWidth > 767) {
+	   if (viewPortWidth > 750) {
 				  // window width is at least 767px
 				  $('body').addClass('desktop').removeClass('mobile');
 
     $(window).scroll(myScroll);
 			$('.search-header').appendTo('.headerwrapper');
+			$('.search-header-toggle').appendTo('.main-navigation');
 			  }
 			  else {
 				  // window width is less than 768px
@@ -161,7 +162,7 @@
 						//	}, 
 		
 			});//end SlickNav
-			$('.search-header').appendTo('.slicknav_menu');
+			$('.search-header, .search-header-toggle').appendTo('.slicknav_menu');
 		  
 		  }// END media query change
 	  };
